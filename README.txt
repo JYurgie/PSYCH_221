@@ -1,3 +1,15 @@
+GENERATE DATA STRUCTURES:
+
+This will run all of the scripts and save the structures for every loaded DNG. This takes forever.
+Saving the structures and my garbage color routine take up so much time and should be commented out for fast debugging. 
+
+The scripts do not average multiple frames. 
+
+The saved structures are massive in size. 
+
+
+
+
 ** DATA FILE STRUCTURE **
 PSYCH_Project/
 	isetcam/
