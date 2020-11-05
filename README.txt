@@ -1,0 +1,33 @@
+** DATA FILE STRUCTURE **
+PSYCH_Project/
+	isetcam/
+	psych221/
+	project/
+		DarkCurrentRate.m
+		ReadNoise.m
+		PRNU_DSNU.m
+		xx.png
+		Camera_Noise/
+			DarkCurrentRate/
+				ISO_XX
+				..
+				..
+				fileinfo.xlsx
+				ISOSpeed.mat
+			Interesting/
+				Interesting/
+					xx.dng
+					..
+					xx.dng
+			PRNU_DSNU/
+				ISO_XX
+				..
+				..
+				fileinfo.xlsx
+				ISOSpeed.mat
+			ReadNoise/
+				ISO_XX
+				..
+				..
+				fileinfo.xlsx
+				ISOSpeed.mat
