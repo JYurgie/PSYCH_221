@@ -1,17 +1,16 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PSYCH 221 : Google Pixel 4A Noise Model - Dark Current Rate Estimation
+% PSYCH 221 : Google Pixel 4A Noise Model - DSNU and PRNU Noise Estimation
 % Authors : Melissa Horowitz, Joey Yurgelon
 % Date : 11/3/2020
 % Required File Structure : 
 %          See 'project/README.txt' - MATLAB
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% clear all 
-% close all
-% clc
+clear all 
+close all
+clc
 
-
-img_path = "Camera_Noise/DarkCurrentRate/ISO_*/";
+img_path = "Camera_Noise/PRNU_DSNU/ISO_*/";
 
 % Load in all of the '.DNG' Files
 disp('Loading in the DNG Files..')
@@ -47,7 +46,6 @@ for i=1:length(files)
    data(i).imgLMstd = std2(data(i).imgLM);
    data(i).imgMstd = std2(data(i).imgM);
    
-   
    % Store the RGB pixel values for the RAW image
    % Slowest CHUNKY routine in the universe. 
    img_unravel = img(:,1);
@@ -56,8 +54,8 @@ for i=1:length(files)
        img_unravel = vertcat(img_unravel,vec);
    end
    
-   data(i).imgUnravel = img_unravel;
-   
+   %data(i).imgUnravel = img_unravel;
+      
    % Wow, this is some garbage code Joey
    red = false;
    green = false;
@@ -245,8 +243,7 @@ data_798S = table2struct(data_798T); % change it back to struct array if necessa
 % end
 
 disp('Saving Workspace Variables')
-%filename = 'DarkCurrentRate_Data.mat';
-filename = 'Z:\DarkCurrentRate_Data.mat';
+filename = 'PRNU_DSNU_Data.mat';
 save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
 
 % Plot the data for each isoSpeed setting (Data is not normalized)

@@ -27,6 +27,25 @@ for i=1:length(files)
    data(i).focalLength = info.FocalLength;
    data(i).exposureTime = info.ExposureTime;
    
+   % Partition the image into 3x3 sub-blocks
+   heightBy3 = info.Height/3;
+   widthBy3 = info.Width/3;
+   
+   data(i).imgTL = img(1:widthBy3, 1:heightBy3);
+   data(i).imgTM = img((1+widthBy3):2*widthBy3, 1:heightBy3);
+   data(i).imgLM = img(1:widthBy3, (1+heightBy3):2*heightBy3);
+   data(i).imgM = img((1+widthBy3):2*widthBy3, (1+heightBy3):2*heightBy3);
+   
+   data(i).imgTLmean = mean2(data(i).imgTL);
+   data(i).imgTMmean = mean2(data(i).imgTM);
+   data(i).imgLMmean = mean2(data(i).imgLM);
+   data(i).imgMmean = mean2(data(i).imgM);
+   
+   data(i).imgTLstd = std2(data(i).imgTL);
+   data(i).imgTMstd = std2(data(i).imgTM);
+   data(i).imgLMstd = std2(data(i).imgLM);
+   data(i).imgMstd = std2(data(i).imgM);
+   
    % Store the RGB pixel values for the RAW image
    img_unravel = img(:,1);
    for j=2:length(img)
@@ -223,7 +242,8 @@ data_798S = table2struct(data_798T); % change it back to struct array if necessa
 % end
 
 disp('Saving Workspace Variables')
-filename = 'ReadNoise_Data.mat';
+%filename = 'ReadNoise_Data.mat';
+filename = 'Z:\ReadNoise_Data.mat';
 save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
 
 % Plot the data for each isoSpeed setting (Data is not normalized)
