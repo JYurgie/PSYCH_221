@@ -6,9 +6,9 @@
 %          See 'project/README.txt' - MATLAB
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% clear all 
-% close all
-% clc
+clear all 
+close all
+clc
 
 img_path = "Camera_Noise/ReadNoise/ISO_*/";
 
@@ -27,124 +27,32 @@ for i=1:length(files)
    data(i).focalLength = info.FocalLength;
    data(i).exposureTime = info.ExposureTime;
    
-   % Store the RGB pixel values for the RAW image
-   img_unravel = img(:,1);
-   for j=2:length(img)
-       vec = img(:,j);
-       img_unravel = vertcat(img_unravel,vec);
-   end
-   
-   data(i).imgUnravel = img_unravel;
-      
-   % Wow, this is some garbage code Joey
-   red = false;
-   green = false;
-   blue = false;
-   
-   for k=1:length(img_unravel)
-       if red == false
-           r(k) = img_unravel(k);
-           red = true;
-           continue
-       end
-       if green == false
-           g(k) = img_unravel(k);
-           green = true;
-           continue
-       end
-       if blue == false
-           b(k) = img_unravel(k);
-           red = false;
-           green = false;
-           continue
-       end
-   end
-   
-   % It works, but you know you dont feel good about it
-   r = nonzeros(r);
-   r = reshape(r,length(r),1);
-   g = nonzeros(g);
-   g = reshape(g,length(g),1);
-   b = nonzeros(b);
-   b = reshape(b,length(b),1);
-   
-   % IDC, it works.
-   data(i).r = r;
-   data(i).g = g;
-   data(i).b = b;
-   
-   data(i).rMean = mean2(r);
-   data(i).gMean = mean2(g);
-   data(i).bMean = mean2(b);
-   
-   data(i).rSTD = std2(r);
-   data(i).gSTD = std2(g);
-   data(i).bSTD = std2(b);
-   
    switch info.ISOSpeedRatings
         case 55
             data(i).imgMeanNorm = mean2(img);
             data(i).imgSTDNorm = std2(img);
-            data(i).rMeanNorm = mean2(r);
-            data(i).rSTDNorm = std2(r);
-            data(i).gMeanNorm = mean2(g);
-            data(i).gSTDNorm = std2(g);
-            data(i).bMeanNorm = mean2(b);
-            data(i).bSTDNorm = std2(b);
         case 99
             data(i).imgMeanNorm = mean2(img/1.8);
             data(i).imgSTDNorm = std2(img/1.8);
-            data(i).rMeanNorm = mean2(r/1.8);
-            data(i).rSTDNorm = std2(r/1.8);
-            data(i).gMeanNorm = mean2(g/1.8);
-            data(i).gSTDNorm = std2(g/1.8);
-            data(i).bMeanNorm = mean2(b/1.8);
-            data(i).bSTDNorm = std2(b/1.8);
         case 198
             data(i).imgMeanNorm = mean2(img/3.6);
             data(i).imgSTDNorm = std2(img/3.6);
-            data(i).rMeanNorm = mean2(r/3.6);
-            data(i).rSTDNorm = std2(r/3.6);
-            data(i).gMeanNorm = mean2(g/3.6);
-            data(i).gSTDNorm = std2(g/3.6);
-            data(i).bMeanNorm = mean2(b/3.6);
-            data(i).bSTDNorm = std2(b/3.6);
         case 299
             data(i).imgMeanNorm = mean2(img/5.44);
             data(i).imgSTDNorm = std2(img/5.44);
-            data(i).rMeanNorm = mean2(r/5.44);
-            data(i).rSTDNorm = std2(r/5.44);
-            data(i).gMeanNorm = mean2(g/5.44);
-            data(i).gSTDNorm = std2(g/5.44);
-            data(i).bMeanNorm = mean2(b/5.44);
-            data(i).bSTDNorm = std2(b/5.44);
         case 395
             data(i).imgMeanNorm = mean2(img/7.18);
             data(i).imgSTDNorm = std2(img/7.18);
-            data(i).rMeanNorm = mean2(r/7.18);
-            data(i).rSTDNorm = std2(r/7.18);
-            data(i).gMeanNorm = mean2(g/7.18);
-            data(i).gSTDNorm = std2(g/7.18);
-            data(i).bMeanNorm = mean2(b/7.18);
-            data(i).bSTDNorm = std2(b/7.18);
         case 798
             data(i).imgMeanNorm = mean2(img/14.51);
             data(i).imgSTDNorm = std2(img/14.51);
-            data(i).rMeanNorm = mean2(r/14.51);
-            data(i).rSTDNorm = std2(r/14.51);
-            data(i).gMeanNorm = mean2(g/14.51);
-            data(i).gSTDNorm = std2(g/14.51);
-            data(i).bMeanNorm = mean2(b/14.51);
-            data(i).bSTDNorm = std2(b/14.51);
 %         case 1598
 %             data(i).imgMeanNorm = mean2(img/35.29);
 %             data(i).imgSTDNorm = std2(img/35.29);
 %         case 3199
 %             data(i).imgMeanNorm = mean2(img/58.164);
 %             data(i).imgSTDNorm = std2(img/58.164);
-   end
-   str = strcat('IMG Processed: ', strcat(' ', string(i)), ' out of  ', strcat(' ', string(length(files))));
-   disp(str)
+    end
 end
 
 disp('Preparing the Structures..')
@@ -222,9 +130,6 @@ data_798S = table2struct(data_798T); % change it back to struct array if necessa
 %     data_55_img_unravel = horzcat(data_55_img_unravel,vec);
 % end
 
-disp('Saving Workspace Variables')
-filename = 'ReadNoise_Data.mat';
-save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
 
 % Plot the data for each isoSpeed setting (Data is not normalized)
 figure(1)

@@ -227,7 +227,7 @@ data_798S = table2struct(data_798T); % change it back to struct array if necessa
 
 disp('Saving Workspace Variables')
 filename = 'DarkCurrentRate_Data.mat';
-save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S'); 
+save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
 
 % Plot the data for each isoSpeed setting (Data is not normalized)
 figure(1)
