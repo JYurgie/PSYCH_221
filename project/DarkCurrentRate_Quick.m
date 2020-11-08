@@ -1,19 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% PSYCH 221 : Google Pixel 4A Noise Model - DSNU and PRNU Noise Estimation
+% PSYCH 221 : Google Pixel 4A Noise Model - Dark Current Rate Estimation
 % Authors : Melissa Horowitz, Joey Yurgelon
 % Date : 11/3/2020
 % Required File Structure : 
 %          See 'project/README.txt' - MATLAB
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-clear all 
-close all
-clc
+% clear all 
+% close all
+% clc
+offset = 62.91;
 
-offsetIMG = 62.91;
-offsetPXL = 153.55;
-
-img_path = "Camera_Noise/PRNU_DSNU/ISO_*/";
+img_path = "Camera_Noise/DarkCurrentRate/ISO_*/";
 
 % Load in all of the '.DNG' Files
 disp('Loading in the DNG Files..')
@@ -30,135 +28,136 @@ for i=1:length(files)
    data(i).focalLength = info.FocalLength;
    data(i).exposureTime = info.ExposureTime;
    
-   % Partition the image into 3x3 sub-blocks
-   heightBy3 = info.Height/3;
-   widthBy3 = info.Width/3;
-   
-   data(i).imgTL = img(1:widthBy3, 1:heightBy3);
-   data(i).imgTM = img((1+widthBy3):2*widthBy3, 1:heightBy3);
-   data(i).imgLM = img(1:widthBy3, (1+heightBy3):2*heightBy3);
-   data(i).imgM = img((1+widthBy3):2*widthBy3, (1+heightBy3):2*heightBy3);
-   
-   data(i).imgTLmean = mean2(data(i).imgTL);
-   data(i).imgTMmean = mean2(data(i).imgTM);
-   data(i).imgLMmean = mean2(data(i).imgLM);
-   data(i).imgMmean = mean2(data(i).imgM);
-   
-   data(i).imgTLstd = std2(data(i).imgTL);
-   data(i).imgTMstd = std2(data(i).imgTM);
-   data(i).imgLMstd = std2(data(i).imgLM);
-   data(i).imgMstd = std2(data(i).imgM);
-   
-   % Store the RGB pixel values for the RAW image
-   % Slowest CHUNKY routine in the universe. 
-   img_unravel = img(:,1);
-   for j=2:length(img)
-       vec = img(:,j);
-       img_unravel = vertcat(img_unravel,vec);
-   end
-   
-   %data(i).imgUnravel = img_unravel;
-      
-   % Wow, this is some garbage code Joey
-   red = false;
-   green = false;
-   blue = false;
-   
-   for k=1:length(img_unravel)
-       if red == false
-           r(k) = img_unravel(k);
-           red = true;
-           continue
-       end
-       if green == false
-           g(k) = img_unravel(k);
-           green = true;
-           continue
-       end
-       if blue == false
-           b(k) = img_unravel(k);
-           red = false;
-           green = false;
-           continue
-       end
-   end
-   
-   % It works, but you know you dont feel good about it
-   r = nonzeros(r);
-   r = reshape(r,length(r),1);
-   g = nonzeros(g);
-   g = reshape(g,length(g),1);
-   b = nonzeros(b);
-   b = reshape(b,length(b),1);
-   
-   % IDC, it works.
-   data(i).r = r;
-   data(i).g = g;
-   data(i).b = b;
-   
-   data(i).rMean = mean2(r);
-   data(i).gMean = mean2(g);
-   data(i).bMean = mean2(b);
-   
-   data(i).rSTD = std2(r);
-   data(i).gSTD = std2(g);
-   data(i).bSTD = std2(b);
+%    % Partition the image into 3x3 sub-blocks
+%    heightBy3 = info.Height/3;
+%    widthBy3 = info.Width/3;
+%    
+%    data(i).imgTL = img(1:widthBy3, 1:heightBy3);
+%    data(i).imgTM = img((1+widthBy3):2*widthBy3, 1:heightBy3);
+%    data(i).imgLM = img(1:widthBy3, (1+heightBy3):2*heightBy3);
+%    data(i).imgM = img((1+widthBy3):2*widthBy3, (1+heightBy3):2*heightBy3);
+%    
+%    data(i).imgTLmean = mean2(data(i).imgTL);
+%    data(i).imgTMmean = mean2(data(i).imgTM);
+%    data(i).imgLMmean = mean2(data(i).imgLM);
+%    data(i).imgMmean = mean2(data(i).imgM);
+%    
+%    data(i).imgTLstd = std2(data(i).imgTL);
+%    data(i).imgTMstd = std2(data(i).imgTM);
+%    data(i).imgLMstd = std2(data(i).imgLM);
+%    data(i).imgMstd = std2(data(i).imgM);
+%    
+%    
+%    % Store the RGB pixel values for the RAW image
+%    % Slowest CHUNKY routine in the universe. 
+%    img_unravel = img(:,1);
+%    for j=2:length(img)
+%        vec = img(:,j);
+%        img_unravel = vertcat(img_unravel,vec);
+%    end
+%    
+%    data(i).imgUnravel = img_unravel;
+%    
+%    % Wow, this is some garbage code Joey
+%    red = false;
+%    green = false;
+%    blue = false;
+%    
+%    for k=1:length(img_unravel)
+%        if red == false
+%            r(k) = img_unravel(k);
+%            red = true;
+%            continue
+%        end
+%        if green == false
+%            g(k) = img_unravel(k);
+%            green = true;
+%            continue
+%        end
+%        if blue == false
+%            b(k) = img_unravel(k);
+%            red = false;
+%            green = false;
+%            continue
+%        end
+%    end
+%    
+%    % It works, but you know you dont feel good about it
+%    r = nonzeros(r);
+%    r = reshape(r,length(r),1);
+%    g = nonzeros(g);
+%    g = reshape(g,length(g),1);
+%    b = nonzeros(b);
+%    b = reshape(b,length(b),1);
+%    
+%    % IDC, it works.
+%    data(i).r = r;
+%    data(i).g = g;
+%    data(i).b = b;
+%    
+%    data(i).rMean = mean2(r);
+%    data(i).gMean = mean2(g);
+%    data(i).bMean = mean2(b);
+%    
+%    data(i).rSTD = std2(r);
+%    data(i).gSTD = std2(g);
+%    data(i).bSTD = std2(b);
    
    switch info.ISOSpeedRatings
         case 55
-            data(i).imgMeanNorm = mean2((img-offsetIMG));
-            data(i).imgSTDNorm = std2((img-offsetIMG));
-            data(i).rMeanNorm = mean2((r-offsetPXL));
-            data(i).rSTDNorm = std2((r-offsetPXL));
-            data(i).gMeanNorm = mean2((g-offsetPXL));
-            data(i).gSTDNorm = std2((g-offsetPXL));
-            data(i).bMeanNorm = mean2((b-offsetPXL));
-            data(i).bSTDNorm = std2((b-offsetPXL));
+            data(i).imgMeanNorm = mean2((img-offset));
+            data(i).imgSTDNorm = std2((img-offset));
+%             data(i).rMeanNorm = mean2(r);
+%             data(i).rSTDNorm = std2(r);
+%             data(i).gMeanNorm = mean2(g);
+%             data(i).gSTDNorm = std2(g);
+%             data(i).bMeanNorm = mean2(b);
+%             data(i).bSTDNorm = std2(b);
         case 99
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/1.8);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/1.8);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/1.8);
-            data(i).rSTDNorm = std2((r-offsetPXL)/1.8);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/1.8);
-            data(i).gSTDNorm = std2((g-offsetPXL)/1.8);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/1.8);
-            data(i).bSTDNorm = std2((b-offsetPXL)/1.8);
+            data(i).imgMeanNorm = mean2((img-offset)/1.8);
+            data(i).imgSTDNorm = std2((img-offset)/1.8);
+%             data(i).rMeanNorm = mean2(r/1.8);
+%             data(i).rSTDNorm = std2(r/1.8);
+%             data(i).gMeanNorm = mean2(g/1.8);
+%             data(i).gSTDNorm = std2(g/1.8);
+%             data(i).bMeanNorm = mean2(b/1.8);
+%             data(i).bSTDNorm = std2(b/1.8);
         case 198
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/3.6);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/3.6);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/3.6);
-            data(i).rSTDNorm = std2((r-offsetPXL)/3.6);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/3.6);
-            data(i).gSTDNorm = std2((g-offsetPXL)/3.6);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/3.6);
-            data(i).bSTDNorm = std2((b-offsetPXL)/3.6);
+            data(i).imgMeanNorm = mean2((img-offset)/3.6);
+            data(i).imgSTDNorm = std2((img-offset)/3.6);
+%             data(i).rMeanNorm = mean2(r/3.6);
+%             data(i).rSTDNorm = std2(r/3.6);
+%             data(i).gMeanNorm = mean2(g/3.6);
+%             data(i).gSTDNorm = std2(g/3.6);
+%             data(i).bMeanNorm = mean2(b/3.6);
+%             data(i).bSTDNorm = std2(b/3.6);
         case 299
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/5.44);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/5.44);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/5.44);
-            data(i).rSTDNorm = std2((r-offsetPXL)/5.44);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/5.44);
-            data(i).gSTDNorm = std2((g-offsetPXL)/5.44);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/5.44);
-            data(i).bSTDNorm = std2((b-offsetPXL)/5.44);
+            data(i).imgMeanNorm = mean2((img-offset)/5.44);
+            data(i).imgSTDNorm = std2((img-offset)/5.44);
+%             data(i).rMeanNorm = mean2(r/5.44);
+%             data(i).rSTDNorm = std2(r/5.44);
+%             data(i).gMeanNorm = mean2(g/5.44);
+%             data(i).gSTDNorm = std2(g/5.44);
+%             data(i).bMeanNorm = mean2(b/5.44);
+%             data(i).bSTDNorm = std2(b/5.44);
         case 395
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/7.18);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/7.18);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/7.18);
-            data(i).rSTDNorm = std2((r-offsetPXL)/7.18);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/7.18);
-            data(i).gSTDNorm = std2((g-offsetPXL)/7.18);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/7.18);
-            data(i).bSTDNorm = std2((b-offsetPXL)/7.18);
+            data(i).imgMeanNorm = mean2((img-offset)/7.18);
+            data(i).imgSTDNorm = std2((img-offset)/7.18);
+%             data(i).rMeanNorm = mean2(r/7.18);
+%             data(i).rSTDNorm = std2(r/7.18);
+%             data(i).gMeanNorm = mean2(g/7.18);
+%             data(i).gSTDNorm = std2(g/7.18);
+%             data(i).bMeanNorm = mean2(b/7.18);
+%             data(i).bSTDNorm = std2(b/7.18);
         case 798
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/14.51);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/14.51);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/14.51);
-            data(i).rSTDNorm = std2((r-offsetPXL)/14.51);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/14.51);
-            data(i).gSTDNorm = std2((g-offsetPXL)/14.51);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/14.51);
-            data(i).bSTDNorm = std2((b-offsetPXL)/14.51);
+            data(i).imgMeanNorm = mean2((img-offset)/14.51);
+            data(i).imgSTDNorm = std2((img-offset)/14.51);
+%             data(i).rMeanNorm = mean2(r/14.51);
+%             data(i).rSTDNorm = std2(r/14.51);
+%             data(i).gMeanNorm = mean2(g/14.51);
+%             data(i).gSTDNorm = std2(g/14.51);
+%             data(i).bMeanNorm = mean2(b/14.51);
+%             data(i).bSTDNorm = std2(b/14.51);
 %         case 1598
 %             data(i).imgMeanNorm = mean2(img/35.29);
 %             data(i).imgSTDNorm = std2(img/35.29);
@@ -246,7 +245,8 @@ data_798S = table2struct(data_798T); % change it back to struct array if necessa
 % end
 
 % disp('Saving Workspace Variables')
-% filename = 'PRNU_DSNU_Data.mat';
+% %filename = 'DarkCurrentRate_Data.mat';
+% filename = 'Z:\DarkCurrentRate_Data.mat';
 % save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
 
 % Plot the data for each isoSpeed setting (Data is not normalized)
