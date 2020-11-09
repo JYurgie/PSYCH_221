@@ -260,9 +260,6 @@ data_198 = data_198(all(~cellfun(@isempty,struct2cell(data_198))));
 data_299 = data_299(all(~cellfun(@isempty,struct2cell(data_299))));
 data_395 = data_395(all(~cellfun(@isempty,struct2cell(data_395))));
 data_798 = data_798(all(~cellfun(@isempty,struct2cell(data_798))));
-%data_1598 = data_1598(all(~cellfun(@isempty,struct2cell(data_1598))));
-%data_3199 = data_3199(all(~cellfun(@isempty,struct2cell(data_3199))));
-
 
 % Create sorted table and structures of the data binned by isoSpeed
 T = struct2table(data_55); % convert the struct array to a table
@@ -289,25 +286,11 @@ T = struct2table(data_798); % convert the struct array to a table
 data_798T = sortrows(T, 'exposureTime'); % sort the table by 'exposureTime'
 data_798S = table2struct(data_798T); % change it back to struct array if necessary
 
-% T = struct2table(data_1598); % convert the struct array to a table
-% data_1598T = sortrows(T, 'exposureTime'); % sort the table by 'exposureTime'
-% data_1598S = table2struct(data_1598T) % change it back to struct array if necessary
-% 
-% T = struct2table(data_3199); % convert the struct array to a table
-% data_3199T = sortrows(T, 'exposureTime'); % sort the table by 'exposureTime'
-% data_3199S = table2struct(data_3199T); % change it back to struct array if necessary
-
-% Might be required to unravel the img to generate box plot
-% data_55_img_unravel = data_55S(1).img(:);
-% for i=2:length(data_55S)
-%     vec = data_55S(i).img(:);
-%     data_55_img_unravel = horzcat(data_55_img_unravel,vec);
-% end
-
 disp('Saving Workspace Variables')
-%filename = 'ReadNoise_Data.mat';
-filename = 'Z:\ReadNoise_Data.mat';
-save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
+filename = 'ReadNoise_Data.mat';
+%filename = 'Z:\ReadNoise_Data.mat';
+%save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
+save(filename, 'data_55S_avg','data_99S_avg','data_198S_avg', 'data_299S_avg', 'data_395S_avg', 'data_798S_avg', '-v7.3');
 
 % Plot the data for each isoSpeed setting (Data is not normalized)
 figure(1)

@@ -1,3 +1,6 @@
 project/Camera_Noise
+project/ReadNoise_Data
+project/DarkCurrentRate_Data
+project/PRNU_DSNU_Data
 isetcam
 psych221

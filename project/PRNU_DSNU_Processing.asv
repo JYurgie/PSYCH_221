@@ -54,6 +54,30 @@ j = 1;
      data_55S_avg(j).imgLMmean = (x1.imgLMmean + x2.imgLMmean + x3.imgLMmean + x4.imgLMmean  + x5.imgLMmean)/5;
      data_55S_avg(j).imgMmean = (x1.imgMmean + x2.imgMmean + x3.imgMmean + x4.imgMmean  + x5.imgMmean)/5;
 
+     data_55S_avg(j).imgTLmeanNorm = (x1.imgTLmeanNorm + x2.imgTLmeanNorm + x3.imgTLmeanNorm + x4.imgTLmeanNorm  + x5.imgTLmeanNorm)/5;
+     data_55S_avg(j).imgTMmeanNorm = (x1.imgTMmeanNorm  + x2.imgTMmeanNorm  + x3.imgTMmeanNorm  + x4.imgTMmeanNorm   + x5.imgTMmeanNorm )/5;
+     data_55S_avg(j).imgLMmeanNorm = (x1.imgLMmeanNorm + x2.imgLMmeanNorm + x3.imgLMmeanNorm + x4.imgLMmeanNorm  + x5.imgLMmeanNorm)/5;
+     data_55S_avg(j).imgMmeanNorm = (x1.imgMmeanNorm + x2.imgMmeanNorm + x3.imgMmeanNorm + x4.imgMmeanNorm  + x5.imgMmeanNorm)/5;
+
+     data_55S_avg(j).imgSTD = (x1.imgSTD + x2.imgSTD + x3.imgSTD + x4.imgSTD  + x5.imgSTD)/5;
+     data_55S_avg(j).imgSTDNorm = (x1.imgSTDNorm + x2.imgSTDNorm + x3.imgSTDNorm + x4.imgSTDNorm  + x5.imgSTDNorm)/5;
+     
+     data_55S_avg(j).rSTD = (x1.rSTD + x2.rSTD + x3.rSTD + x4.rSTD  + x5.rSTD)/5;
+     data_55S_avg(j).gSTD = (x1.gSTD + x2.gSTD + x3.gSTD + x4.gSTD  + x5.gSTD)/5;
+     data_55S_avg(j).bSTD = (x1.bSTD + x2.bSTD + x3.bSTD + x4.bSTD  + x5.bSTD)/5;
+     data_55S_avg(j).rSTDNorm = (x1.rSTDNorm + x2.rSTDNorm + x3.rSTDNorm + x4.rSTDNorm  + x5.rSTDNorm)/5;
+     data_55S_avg(j).gSTDNorm = (x1.gSTDNorm + x2.gSTDNorm + x3.gSTDNorm + x4.gSTDNorm  + x5.gSTDNorm)/5;
+     data_55S_avg(j).bSTDNorm = (x1.bSTDNorm + x2.bSTDNorm + x3.bSTDNorm + x4.bSTDNorm  + x5.bSTDNorm)/5;
+     
+     data_55S_avg(j).imgTLstd = (x1.imgTLstd + x2.imgTLstd + x3.imgTLstd + x4.imgTLstd  + x5.imgTLstd)/5;
+     data_55S_avg(j).imgTMstd = (x1.imgTMstd  + x2.imgTMstd  + x3.imgTMstd  + x4.imgTMstd   + x5.imgTMstd)/5;
+     data_55S_avg(j).imgLMstd = (x1.imgLMstd + x2.imgLMstd + x3.imgLMstd + x4.imgLMstd  + x5.imgLMstd)/5;
+     data_55S_avg(j).imgMstd = (x1.imgMstd + x2.imgMstd + x3.imgMstd + x4.imgMstd  + x5.imgMstd)/5;
+
+     data_55S_avg(j).imgTLstdNorm = (x1.imgTLstdNorm + x2.imgTLstdNorm + x3.imgTLstdNorm + x4.imgTLstdNorm  + x5.imgTLstdNorm)/5;
+     data_55S_avg(j).imgTMstdNorm = (x1.imgTMstdNorm  + x2.imgTMstdNorm  + x3.imgTMstdNorm  + x4.imgTMstdNorm   + x5.imgTMstdNorm )/5;
+     data_55S_avg(j).imgLMstdNorm = (x1.imgLMstdNorm + x2.imgLMstdNorm + x3.imgLMstdNorm + x4.imgLMstdNorm  + x5.imgLMstdNorm)/5;
+     data_55S_avg(j).imgMstdNorm = (x1.imgMstdNorm + x2.imgMstdNorm + x3.imgMstdNorm + x4.imgMstdNorm  + x5.imgMstdNorm)/5;
      
      j = j + 1;  
  end
@@ -84,6 +108,31 @@ j = 1;
      data_99S_avg(j).imgLMmean = (x1.imgLMmean + x2.imgLMmean + x3.imgLMmean + x4.imgLMmean  + x5.imgLMmean)/5;
      data_99S_avg(j).imgMmean = (x1.imgMmean + x2.imgMmean + x3.imgMmean + x4.imgMmean  + x5.imgMmean)/5;
      
+     data_99S_avg(j).imgTLmeanNorm = (x1.imgTLmeanNorm + x2.imgTLmeanNorm + x3.imgTLmeanNorm + x4.imgTLmeanNorm  + x5.imgTLmeanNorm)/5;
+     data_99S_avg(j).imgTMmeanNorm = (x1.imgTMmeanNorm  + x2.imgTMmeanNorm  + x3.imgTMmeanNorm  + x4.imgTMmeanNorm   + x5.imgTMmeanNorm )/5;
+     data_99S_avg(j).imgLMmeanNorm = (x1.imgLMmeanNorm + x2.imgLMmeanNorm + x3.imgLMmeanNorm + x4.imgLMmeanNorm  + x5.imgLMmeanNorm)/5;
+     data_99S_avg(j).imgMmeanNorm = (x1.imgMmeanNorm + x2.imgMmeanNorm + x3.imgMmeanNorm + x4.imgMmeanNorm  + x5.imgMmeanNorm)/5;     
+     
+          data_55S_avg(j).imgSTD = (x1.imgSTD + x2.imgSTD + x3.imgSTD + x4.imgSTD  + x5.imgSTD)/5;
+     data_55S_avg(j).imgSTDNorm = (x1.imgSTDNorm + x2.imgSTDNorm + x3.imgSTDNorm + x4.imgSTDNorm  + x5.imgSTDNorm)/5;
+     
+     data_55S_avg(j).rSTD = (x1.rSTD + x2.rSTD + x3.rSTD + x4.rSTD  + x5.rSTD)/5;
+     data_55S_avg(j).gSTD = (x1.gSTD + x2.gSTD + x3.gSTD + x4.gSTD  + x5.gSTD)/5;
+     data_55S_avg(j).bSTD = (x1.bSTD + x2.bSTD + x3.bSTD + x4.bSTD  + x5.bSTD)/5;
+     data_55S_avg(j).rSTDNorm = (x1.rSTDNorm + x2.rSTDNorm + x3.rSTDNorm + x4.rSTDNorm  + x5.rSTDNorm)/5;
+     data_55S_avg(j).gSTDNorm = (x1.gSTDNorm + x2.gSTDNorm + x3.gSTDNorm + x4.gSTDNorm  + x5.gSTDNorm)/5;
+     data_55S_avg(j).bSTDNorm = (x1.bSTDNorm + x2.bSTDNorm + x3.bSTDNorm + x4.bSTDNorm  + x5.bSTDNorm)/5;
+     
+     data_55S_avg(j).imgTLstd = (x1.imgTLstd + x2.imgTLstd + x3.imgTLstd + x4.imgTLstd  + x5.imgTLstd)/5;
+     data_55S_avg(j).imgTMstd = (x1.imgTMstd  + x2.imgTMstd  + x3.imgTMstd  + x4.imgTMstd   + x5.imgTMstd)/5;
+     data_55S_avg(j).imgLMstd = (x1.imgLMstd + x2.imgLMstd + x3.imgLMstd + x4.imgLMstd  + x5.imgLMstd)/5;
+     data_55S_avg(j).imgMstd = (x1.imgMstd + x2.imgMstd + x3.imgMstd + x4.imgMstd  + x5.imgMstd)/5;
+
+     data_55S_avg(j).imgTLstdNorm = (x1.imgTLstdNorm + x2.imgTLstdNorm + x3.imgTLstdNorm + x4.imgTLstdNorm  + x5.imgTLstdNorm)/5;
+     data_55S_avg(j).imgTMstdNorm = (x1.imgTMstdNorm  + x2.imgTMstdNorm  + x3.imgTMstdNorm  + x4.imgTMstdNorm   + x5.imgTMstdNorm )/5;
+     data_55S_avg(j).imgLMstdNorm = (x1.imgLMstdNorm + x2.imgLMstdNorm + x3.imgLMstdNorm + x4.imgLMstdNorm  + x5.imgLMstdNorm)/5;
+     data_55S_avg(j).imgMstdNorm = (x1.imgMstdNorm + x2.imgMstdNorm + x3.imgMstdNorm + x4.imgMstdNorm  + x5.imgMstdNorm)/5;
+     
      j = j + 1;  
  end
  
@@ -112,6 +161,31 @@ j = 1;
      data_198S_avg(j).imgTMmean = (x1.imgTMmean  + x2.imgTMmean  + x3.imgTMmean  + x4.imgTMmean   + x5.imgTMmean )/5;
      data_198S_avg(j).imgLMmean = (x1.imgLMmean + x2.imgLMmean + x3.imgLMmean + x4.imgLMmean  + x5.imgLMmean)/5;
      data_198S_avg(j).imgMmean = (x1.imgMmean + x2.imgMmean + x3.imgMmean + x4.imgMmean  + x5.imgMmean)/5;
+     
+     data_198S_avg(j).imgTLmeanNorm = (x1.imgTLmeanNorm + x2.imgTLmeanNorm + x3.imgTLmeanNorm + x4.imgTLmeanNorm  + x5.imgTLmeanNorm)/5;
+     data_198S_avg(j).imgTMmeanNorm = (x1.imgTMmeanNorm  + x2.imgTMmeanNorm  + x3.imgTMmeanNorm  + x4.imgTMmeanNorm   + x5.imgTMmeanNorm )/5;
+     data_198S_avg(j).imgLMmeanNorm = (x1.imgLMmeanNorm + x2.imgLMmeanNorm + x3.imgLMmeanNorm + x4.imgLMmeanNorm  + x5.imgLMmeanNorm)/5;
+     data_198S_avg(j).imgMmeanNorm = (x1.imgMmeanNorm + x2.imgMmeanNorm + x3.imgMmeanNorm + x4.imgMmeanNorm  + x5.imgMmeanNorm)/5;     
+     
+          data_55S_avg(j).imgSTD = (x1.imgSTD + x2.imgSTD + x3.imgSTD + x4.imgSTD  + x5.imgSTD)/5;
+     data_55S_avg(j).imgSTDNorm = (x1.imgSTDNorm + x2.imgSTDNorm + x3.imgSTDNorm + x4.imgSTDNorm  + x5.imgSTDNorm)/5;
+     
+     data_55S_avg(j).rSTD = (x1.rSTD + x2.rSTD + x3.rSTD + x4.rSTD  + x5.rSTD)/5;
+     data_55S_avg(j).gSTD = (x1.gSTD + x2.gSTD + x3.gSTD + x4.gSTD  + x5.gSTD)/5;
+     data_55S_avg(j).bSTD = (x1.bSTD + x2.bSTD + x3.bSTD + x4.bSTD  + x5.bSTD)/5;
+     data_55S_avg(j).rSTDNorm = (x1.rSTDNorm + x2.rSTDNorm + x3.rSTDNorm + x4.rSTDNorm  + x5.rSTDNorm)/5;
+     data_55S_avg(j).gSTDNorm = (x1.gSTDNorm + x2.gSTDNorm + x3.gSTDNorm + x4.gSTDNorm  + x5.gSTDNorm)/5;
+     data_55S_avg(j).bSTDNorm = (x1.bSTDNorm + x2.bSTDNorm + x3.bSTDNorm + x4.bSTDNorm  + x5.bSTDNorm)/5;
+     
+     data_55S_avg(j).imgTLstd = (x1.imgTLstd + x2.imgTLstd + x3.imgTLstd + x4.imgTLstd  + x5.imgTLstd)/5;
+     data_55S_avg(j).imgTMstd = (x1.imgTMstd  + x2.imgTMstd  + x3.imgTMstd  + x4.imgTMstd   + x5.imgTMstd)/5;
+     data_55S_avg(j).imgLMstd = (x1.imgLMstd + x2.imgLMstd + x3.imgLMstd + x4.imgLMstd  + x5.imgLMstd)/5;
+     data_55S_avg(j).imgMstd = (x1.imgMstd + x2.imgMstd + x3.imgMstd + x4.imgMstd  + x5.imgMstd)/5;
+
+     data_55S_avg(j).imgTLstdNorm = (x1.imgTLstdNorm + x2.imgTLstdNorm + x3.imgTLstdNorm + x4.imgTLstdNorm  + x5.imgTLstdNorm)/5;
+     data_55S_avg(j).imgTMstdNorm = (x1.imgTMstdNorm  + x2.imgTMstdNorm  + x3.imgTMstdNorm  + x4.imgTMstdNorm   + x5.imgTMstdNorm )/5;
+     data_55S_avg(j).imgLMstdNorm = (x1.imgLMstdNorm + x2.imgLMstdNorm + x3.imgLMstdNorm + x4.imgLMstdNorm  + x5.imgLMstdNorm)/5;
+     data_55S_avg(j).imgMstdNorm = (x1.imgMstdNorm + x2.imgMstdNorm + x3.imgMstdNorm + x4.imgMstdNorm  + x5.imgMstdNorm)/5;
      
      j = j + 1;  
  end
@@ -142,6 +216,31 @@ j = 1;
      data_299S_avg(j).imgLMmean = (x1.imgLMmean + x2.imgLMmean + x3.imgLMmean + x4.imgLMmean  + x5.imgLMmean)/5;
      data_299S_avg(j).imgMmean = (x1.imgMmean + x2.imgMmean + x3.imgMmean + x4.imgMmean  + x5.imgMmean)/5;
      
+     data_299S_avg(j).imgTLmeanNorm = (x1.imgTLmeanNorm + x2.imgTLmeanNorm + x3.imgTLmeanNorm + x4.imgTLmeanNorm  + x5.imgTLmeanNorm)/5;
+     data_299S_avg(j).imgTMmeanNorm = (x1.imgTMmeanNorm  + x2.imgTMmeanNorm  + x3.imgTMmeanNorm  + x4.imgTMmeanNorm   + x5.imgTMmeanNorm )/5;
+     data_299S_avg(j).imgLMmeanNorm = (x1.imgLMmeanNorm + x2.imgLMmeanNorm + x3.imgLMmeanNorm + x4.imgLMmeanNorm  + x5.imgLMmeanNorm)/5;
+     data_299S_avg(j).imgMmeanNorm = (x1.imgMmeanNorm + x2.imgMmeanNorm + x3.imgMmeanNorm + x4.imgMmeanNorm  + x5.imgMmeanNorm)/5;     
+     
+     data_299S_avg(j).imgSTD = (x1.imgSTD + x2.imgSTD + x3.imgSTD + x4.imgSTD  + x5.imgSTD)/5;
+     data_299S_avg(j).imgSTDNorm = (x1.imgSTDNorm + x2.imgSTDNorm + x3.imgSTDNorm + x4.imgSTDNorm  + x5.imgSTDNorm)/5;
+     
+     data_299S_avg(j).rSTD = (x1.rSTD + x2.rSTD + x3.rSTD + x4.rSTD  + x5.rSTD)/5;
+     data_299S_avg(j).gSTD = (x1.gSTD + x2.gSTD + x3.gSTD + x4.gSTD  + x5.gSTD)/5;
+     data_299S_avg(j).bSTD = (x1.bSTD + x2.bSTD + x3.bSTD + x4.bSTD  + x5.bSTD)/5;
+     data_299S_avg(j).rSTDNorm = (x1.rSTDNorm + x2.rSTDNorm + x3.rSTDNorm + x4.rSTDNorm  + x5.rSTDNorm)/5;
+     data_299S_avg(j).gSTDNorm = (x1.gSTDNorm + x2.gSTDNorm + x3.gSTDNorm + x4.gSTDNorm  + x5.gSTDNorm)/5;
+     data_299S_avg(j).bSTDNorm = (x1.bSTDNorm + x2.bSTDNorm + x3.bSTDNorm + x4.bSTDNorm  + x5.bSTDNorm)/5;
+     
+     data_55S_avg(j).imgTLstd = (x1.imgTLstd + x2.imgTLstd + x3.imgTLstd + x4.imgTLstd  + x5.imgTLstd)/5;
+     data_55S_avg(j).imgTMstd = (x1.imgTMstd  + x2.imgTMstd  + x3.imgTMstd  + x4.imgTMstd   + x5.imgTMstd)/5;
+     data_55S_avg(j).imgLMstd = (x1.imgLMstd + x2.imgLMstd + x3.imgLMstd + x4.imgLMstd  + x5.imgLMstd)/5;
+     data_55S_avg(j).imgMstd = (x1.imgMstd + x2.imgMstd + x3.imgMstd + x4.imgMstd  + x5.imgMstd)/5;
+
+     data_55S_avg(j).imgTLstdNorm = (x1.imgTLstdNorm + x2.imgTLstdNorm + x3.imgTLstdNorm + x4.imgTLstdNorm  + x5.imgTLstdNorm)/5;
+     data_55S_avg(j).imgTMstdNorm = (x1.imgTMstdNorm  + x2.imgTMstdNorm  + x3.imgTMstdNorm  + x4.imgTMstdNorm   + x5.imgTMstdNorm )/5;
+     data_55S_avg(j).imgLMstdNorm = (x1.imgLMstdNorm + x2.imgLMstdNorm + x3.imgLMstdNorm + x4.imgLMstdNorm  + x5.imgLMstdNorm)/5;
+     data_55S_avg(j).imgMstdNorm = (x1.imgMstdNorm + x2.imgMstdNorm + x3.imgMstdNorm + x4.imgMstdNorm  + x5.imgMstdNorm)/5;
+     
      j = j + 1;  
  end
  
@@ -171,6 +270,31 @@ j = 1;
      data_395S_avg(j).imgLMmean = (x1.imgLMmean + x2.imgLMmean + x3.imgLMmean + x4.imgLMmean  + x5.imgLMmean)/5;
      data_395S_avg(j).imgMmean = (x1.imgMmean + x2.imgMmean + x3.imgMmean + x4.imgMmean  + x5.imgMmean)/5;
      
+     data_395S_avg(j).imgTLmeanNorm = (x1.imgTLmeanNorm + x2.imgTLmeanNorm + x3.imgTLmeanNorm + x4.imgTLmeanNorm  + x5.imgTLmeanNorm)/5;
+     data_395S_avg(j).imgTMmeanNorm = (x1.imgTMmeanNorm  + x2.imgTMmeanNorm  + x3.imgTMmeanNorm  + x4.imgTMmeanNorm   + x5.imgTMmeanNorm )/5;
+     data_395S_avg(j).imgLMmeanNorm = (x1.imgLMmeanNorm + x2.imgLMmeanNorm + x3.imgLMmeanNorm + x4.imgLMmeanNorm  + x5.imgLMmeanNorm)/5;
+     data_395S_avg(j).imgMmeanNorm = (x1.imgMmeanNorm + x2.imgMmeanNorm + x3.imgMmeanNorm + x4.imgMmeanNorm  + x5.imgMmeanNorm)/5;    
+     
+     data_395S_avg(j).imgSTD = (x1.imgSTD + x2.imgSTD + x3.imgSTD + x4.imgSTD  + x5.imgSTD)/5;
+     data_395S_avg(j).imgSTDNorm = (x1.imgSTDNorm + x2.imgSTDNorm + x3.imgSTDNorm + x4.imgSTDNorm  + x5.imgSTDNorm)/5;
+     
+     data_395S_avg(j).rSTD = (x1.rSTD + x2.rSTD + x3.rSTD + x4.rSTD  + x5.rSTD)/5;
+     data_395S_avg(j).gSTD = (x1.gSTD + x2.gSTD + x3.gSTD + x4.gSTD  + x5.gSTD)/5;
+     data_395S_avg(j).bSTD = (x1.bSTD + x2.bSTD + x3.bSTD + x4.bSTD  + x5.bSTD)/5;
+     data_395S_avg(j).rSTDNorm = (x1.rSTDNorm + x2.rSTDNorm + x3.rSTDNorm + x4.rSTDNorm  + x5.rSTDNorm)/5;
+     data_395S_avg(j).gSTDNorm = (x1.gSTDNorm + x2.gSTDNorm + x3.gSTDNorm + x4.gSTDNorm  + x5.gSTDNorm)/5;
+     data_395S_avg(j).bSTDNorm = (x1.bSTDNorm + x2.bSTDNorm + x3.bSTDNorm + x4.bSTDNorm  + x5.bSTDNorm)/5;
+     
+     data_395S_avg(j).imgTLstd = (x1.imgTLstd + x2.imgTLstd + x3.imgTLstd + x4.imgTLstd  + x5.imgTLstd)/5;
+     data_395S_avg(j).imgTMstd = (x1.imgTMstd  + x2.imgTMstd  + x3.imgTMstd  + x4.imgTMstd   + x5.imgTMstd)/5;
+     data_395S_avg(j).imgLMstd = (x1.imgLMstd + x2.imgLMstd + x3.imgLMstd + x4.imgLMstd  + x5.imgLMstd)/5;
+     data_395S_avg(j).imgMstd = (x1.imgMstd + x2.imgMstd + x3.imgMstd + x4.imgMstd  + x5.imgMstd)/5;
+
+     data_395S_avg(j).imgTLstdNorm = (x1.imgTLstdNorm + x2.imgTLstdNorm + x3.imgTLstdNorm + x4.imgTLstdNorm  + x5.imgTLstdNorm)/5;
+     data_395S_avg(j).imgTMstdNorm = (x1.imgTMstdNorm  + x2.imgTMstdNorm  + x3.imgTMstdNorm  + x4.imgTMstdNorm   + x5.imgTMstdNorm )/5;
+     data_395S_avg(j).imgLMstdNorm = (x1.imgLMstdNorm + x2.imgLMstdNorm + x3.imgLMstdNorm + x4.imgLMstdNorm  + x5.imgLMstdNorm)/5;
+     data_395S_avg(j).imgMstdNorm = (x1.imgMstdNorm + x2.imgMstdNorm + x3.imgMstdNorm + x4.imgMstdNorm  + x5.imgMstdNorm)/5;
+     
      j = j + 1;  
  end
  
@@ -199,6 +323,31 @@ j = 1;
      data_798S_avg(j).imgTMmean = (x1.imgTMmean  + x2.imgTMmean  + x3.imgTMmean  + x4.imgTMmean   + x5.imgTMmean )/5;
      data_798S_avg(j).imgLMmean = (x1.imgLMmean + x2.imgLMmean + x3.imgLMmean + x4.imgLMmean  + x5.imgLMmean)/5;
      data_798S_avg(j).imgMmean = (x1.imgMmean + x2.imgMmean + x3.imgMmean + x4.imgMmean  + x5.imgMmean)/5;
+     
+     data_798S_avg(j).imgTLmeanNorm = (x1.imgTLmeanNorm + x2.imgTLmeanNorm + x3.imgTLmeanNorm + x4.imgTLmeanNorm  + x5.imgTLmeanNorm)/5;
+     data_798S_avg(j).imgTMmeanNorm = (x1.imgTMmeanNorm  + x2.imgTMmeanNorm  + x3.imgTMmeanNorm  + x4.imgTMmeanNorm   + x5.imgTMmeanNorm )/5;
+     data_798S_avg(j).imgLMmeanNorm = (x1.imgLMmeanNorm + x2.imgLMmeanNorm + x3.imgLMmeanNorm + x4.imgLMmeanNorm  + x5.imgLMmeanNorm)/5;
+     data_798S_avg(j).imgMmeanNorm = (x1.imgMmeanNorm + x2.imgMmeanNorm + x3.imgMmeanNorm + x4.imgMmeanNorm  + x5.imgMmeanNorm)/5;     
+     
+     data_798S_avg(j).imgSTD = (x1.imgSTD + x2.imgSTD + x3.imgSTD + x4.imgSTD  + x5.imgSTD)/5;
+     data_798S_avg(j).imgSTDNorm = (x1.imgSTDNorm + x2.imgSTDNorm + x3.imgSTDNorm + x4.imgSTDNorm  + x5.imgSTDNorm)/5;
+     
+     data_798S_avg(j).rSTD = (x1.rSTD + x2.rSTD + x3.rSTD + x4.rSTD  + x5.rSTD)/5;
+     data_798S_avg(j).gSTD = (x1.gSTD + x2.gSTD + x3.gSTD + x4.gSTD  + x5.gSTD)/5;
+     data_798S_avg(j).bSTD = (x1.bSTD + x2.bSTD + x3.bSTD + x4.bSTD  + x5.bSTD)/5;
+     data_798S_avg(j).rSTDNorm = (x1.rSTDNorm + x2.rSTDNorm + x3.rSTDNorm + x4.rSTDNorm  + x5.rSTDNorm)/5;
+     data_798S_avg(j).gSTDNorm = (x1.gSTDNorm + x2.gSTDNorm + x3.gSTDNorm + x4.gSTDNorm  + x5.gSTDNorm)/5;
+     data_798S_avg(j).bSTDNorm = (x1.bSTDNorm + x2.bSTDNorm + x3.bSTDNorm + x4.bSTDNorm  + x5.bSTDNorm)/5;
+     
+     data_798S_avg(j).imgTLstd = (x1.imgTLstd + x2.imgTLstd + x3.imgTLstd + x4.imgTLstd  + x5.imgTLstd)/5;
+     data_798S_avg(j).imgTMstd = (x1.imgTMstd  + x2.imgTMstd  + x3.imgTMstd  + x4.imgTMstd   + x5.imgTMstd)/5;
+     data_798S_avg(j).imgLMstd = (x1.imgLMstd + x2.imgLMstd + x3.imgLMstd + x4.imgLMstd  + x5.imgLMstd)/5;
+     data_798S_avg(j).imgMstd = (x1.imgMstd + x2.imgMstd + x3.imgMstd + x4.imgMstd  + x5.imgMstd)/5;
+
+     data_798S_avg(j).imgTLstdNorm = (x1.imgTLstdNorm + x2.imgTLstdNorm + x3.imgTLstdNorm + x4.imgTLstdNorm  + x5.imgTLstdNorm)/5;
+     data_798S_avg(j).imgTMstdNorm = (x1.imgTMstdNorm  + x2.imgTMstdNorm  + x3.imgTMstdNorm  + x4.imgTMstdNorm   + x5.imgTMstdNorm )/5;
+     data_798S_avg(j).imgLMstdNorm = (x1.imgLMstdNorm + x2.imgLMstdNorm + x3.imgLMstdNorm + x4.imgLMstdNorm  + x5.imgLMstdNorm)/5;
+     data_798S_avg(j).imgMstdNorm = (x1.imgMstdNorm + x2.imgMstdNorm + x3.imgMstdNorm + x4.imgMstdNorm  + x5.imgMstdNorm)/5;
      
      j = j + 1;  
  end
@@ -743,14 +892,14 @@ hold off
 
 
 % NON-NORMALIZED ---- SENSOR LOCATION
-figure(3)
+figure(5)
 hold on
 % Plot a single ISOSpeed - 55
-bestfit1 = polyfit(data_55T_avg.exposureTime, data_55T_avg.imgTLMean, 1);
+bestfit1 = polyfit(data_55T_avg.exposureTime, data_55T_avg.imgTLmean, 1);
 orig1 = polyval(bestfit1, data_55T_avg.exposureTime);
 xtnd1 = polyval(bestfit1, [0 60e-3]);
 disp_pr_s = bestfit1(1)*data_55T_avg.exposureTime + bestfit1(2);
-scatter(data_55T_avg.exposureTime, data_55T_avg.imgTLMean, 'r', 'DisplayName', 'TL55')
+scatter(data_55T_avg.exposureTime, data_55T_avg.imgTLmean, 'r', 'DisplayName', 'TL55')
 plot(data_55T_avg.exposureTime, orig1, '--r', [0 60e-3], xtnd1, '--r', 'DisplayName', 'TL55')
 theString = sprintf('TL55: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
 text(10e-3, 200, theString, 'FontSize', 12);
@@ -768,11 +917,11 @@ text(10e-3, 190, theString, 'FontSize', 12);
 
 
 % Plot a single ISOSpeed - 99
-bestfit1 = polyfit(data_99T_avg.exposureTime, data_99T_avg.imgTLMean, 1);
+bestfit1 = polyfit(data_99T_avg.exposureTime, data_99T_avg.imgTLmean, 1);
 orig1 = polyval(bestfit1, data_99T_avg.exposureTime);
 xtnd1 = polyval(bestfit1, [0 60e-3]);
 disp_pr_s = bestfit1(1)*data_99T_avg.exposureTime + bestfit1(2);
-scatter(data_99T_avg.exposureTime, data_99T_avg.imgMmean, 'r', 'DisplayName', 'TL99')
+scatter(data_99T_avg.exposureTime, data_99T_avg.imgTLmean, 'r', 'DisplayName', 'TL99')
 plot(data_99T_avg.exposureTime, orig1, '--r', [0 60e-3], xtnd1, '--r', 'DisplayName', 'TL99')
 theString = sprintf('TL99: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
 text(10e-3, 170, theString, 'FontSize', 12);
@@ -788,11 +937,11 @@ text(10e-3, 160, theString, 'FontSize', 12);
 
 
 % Plot a single ISOSpeed - 198
-bestfit1 = polyfit(data_198T_avg.exposureTime, data_198T_avg.imgTLMean, 1);
+bestfit1 = polyfit(data_198T_avg.exposureTime, data_198T_avg.imgTLmean, 1);
 orig1 = polyval(bestfit1, data_198T_avg.exposureTime);
 xtnd1 = polyval(bestfit1, [0 20e-3]);
 disp_pr_s = bestfit1(1)*data_198T_avg.exposureTime + bestfit1(2);
-scatter(data_198T_avg.exposureTime, data_198T_avg.imgTLMean, 'r', 'DisplayName', 'TL198')
+scatter(data_198T_avg.exposureTime, data_198T_avg.imgTLmean, 'r', 'DisplayName', 'TL198')
 plot(data_198T_avg.exposureTime, orig1, '--g', [0 20e-3], xtnd1, '--g', 'DisplayName', 'TL198')
 theString = sprintf('TL198: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
 text(25e-3, 200, theString, 'FontSize', 12);
@@ -808,11 +957,11 @@ text(25e-3, 190, theString, 'FontSize', 12);
 
 
 % Plot a single ISOSpeed - 299
-bestfit1 = polyfit(data_299T_avg.exposureTime, data_299T_avg.imgTLMean, 1);
+bestfit1 = polyfit(data_299T_avg.exposureTime, data_299T_avg.imgTLmean, 1);
 orig1 = polyval(bestfit1, data_299T_avg.exposureTime);
 xtnd1 = polyval(bestfit1, [0 15e-3]);
 disp_pr_s = bestfit1(1)*data_299T_avg.exposureTime + bestfit1(2);
-scatter(data_299T_avg.exposureTime, data_299T_avg.imgTLMean, 'b', 'DisplayName', 'TL299')
+scatter(data_299T_avg.exposureTime, data_299T_avg.imgTLmean, 'b', 'DisplayName', 'TL299')
 plot(data_299T_avg.exposureTime, orig1, '--b', [0 15e-3], xtnd1, '--b', 'DisplayName', 'TL299')
 theString = sprintf('TL299: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
 text(25e-3, 170, theString, 'FontSize', 12);
@@ -827,11 +976,11 @@ theString = sprintf('M299: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
 text(25e-3, 160, theString, 'FontSize', 12);
 
 % Plot a single ISOSpeed - 395
-bestfit1 = polyfit(data_395T_avg.exposureTime, data_395T_avg.imgTLMean, 1);
+bestfit1 = polyfit(data_395T_avg.exposureTime, data_395T_avg.imgTLmean, 1);
 orig1 = polyval(bestfit1, data_395T_avg.exposureTime);
 xtnd1 = polyval(bestfit1, [0 10e-3]);
 disp_pr_s = bestfit1(1)*data_395T_avg.exposureTime + bestfit1(2);
-scatter(data_395T_avg.exposureTime, data_395T_avg.imgTLMean, 'r', 'DisplayName', 'TL395')
+scatter(data_395T_avg.exposureTime, data_395T_avg.imgTLmean, 'r', 'DisplayName', 'TL395')
 plot(data_395T_avg.exposureTime, orig1, '--c', [0 10e-3], xtnd1, '--c', 'DisplayName', 'TL395')
 theString = sprintf('TL395: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
 text(40e-3, 200, theString, 'FontSize', 12);
@@ -847,35 +996,163 @@ text(40e-3, 190, theString, 'FontSize', 12);
 
 
 % Plot a single ISOSpeed - 798
-bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.imgTLMean, 1);
+bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.imgTLmean, 1);
 orig2 = polyval(bestfit2, data_798T_avg.exposureTime);
 xtnd2 = polyval(bestfit2, [0 5e-3]);
 disp_pr_s = bestfit2(1)*data_798T_avg.exposureTime + bestfit2(2);
-scatter(data_798T_avg.exposureTime, data_798T_avg.imgTLMean, 'r', 'DisplayName', 'TL798')
+scatter(data_798T_avg.exposureTime, data_798T_avg.imgTLmean, 'r', 'DisplayName', 'TL798')
 plot(data_798T_avg.exposureTime, orig2,'--m', [0 5e-3], xtnd2, '--m', 'DisplayName', 'TL798')
 %plot(data_798T_avg.exposureTime, xtnd2, '--m', 'DisplayName', '798')
-theString = sprintf('798: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
+theString = sprintf('TL798: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
 text(40e-3, 170, theString, 'FontSize', 12);
 
-bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.gMean, 1);
+bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.imgMmean, 1);
 orig2 = polyval(bestfit2, data_798T_avg.exposureTime);
 xtnd2 = polyval(bestfit2, [0 5e-3]);
 disp_pr_s = bestfit2(1)*data_798T_avg.exposureTime + bestfit2(2);
-scatter(data_798T_avg.exposureTime, data_798T_avg.gMean, 'g', 'DisplayName', 'g798')
-plot(data_798T_avg.exposureTime, orig2,'--m', [0 5e-3], xtnd2, '--m', 'DisplayName', 'g798')
+scatter(data_798T_avg.exposureTime, data_798T_avg.imgMmean, 'g', 'DisplayName', 'M798')
+plot(data_798T_avg.exposureTime, orig2,'--m', [0 5e-3], xtnd2, '--m', 'DisplayName', 'M798')
 %plot(data_798T_avg.exposureTime, xtnd2, '--m', 'DisplayName', '798')
-theString = sprintf('798g: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
+theString = sprintf('M798: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
 text(40e-3, 160, theString, 'FontSize', 12);
 
-bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.bMean, 1);
+
+title('DN vs. Exposure Time (s)')
+xlabel('Exposure Time (s)')
+ylabel('Digital Number (16-bit FS)')
+legend
+
+
+hold off
+
+
+
+% NORMALIZED ---- SENSOR LOCATION
+figure(6)
+hold on
+% Plot a single ISOSpeed - 55
+bestfit1 = polyfit(data_55T_avg.exposureTime, data_55T_avg.imgTLmeanNorm, 1);
+orig1 = polyval(bestfit1, data_55T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 60e-3]);
+disp_pr_s = bestfit1(1)*data_55T_avg.exposureTime + bestfit1(2);
+scatter(data_55T_avg.exposureTime, data_55T_avg.imgTLmeanNorm, 'r', 'DisplayName', 'TL55')
+plot(data_55T_avg.exposureTime, orig1, '--r', [0 60e-3], xtnd1, '--r', 'DisplayName', 'TL55')
+theString = sprintf('TL55: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(10e-3, 200, theString, 'FontSize', 12);
+
+bestfit1 = polyfit(data_55T_avg.exposureTime, data_55T_avg.imgMmeanNorm, 1);
+orig1 = polyval(bestfit1, data_55T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 60e-3]);
+disp_pr_s = bestfit1(1)*data_55T_avg.exposureTime + bestfit1(2);
+scatter(data_55T_avg.exposureTime, data_55T_avg.imgMmeanNorm, 'g', 'DisplayName', 'M55')
+plot(data_55T_avg.exposureTime, orig1, '--r', [0 60e-3], xtnd1, '--r', 'DisplayName', 'M55')
+theString = sprintf('M55: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(10e-3, 190, theString, 'FontSize', 12);
+
+
+
+
+% Plot a single ISOSpeed - 99
+bestfit1 = polyfit(data_99T_avg.exposureTime, data_99T_avg.imgTLmeanNorm, 1);
+orig1 = polyval(bestfit1, data_99T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 60e-3]);
+disp_pr_s = bestfit1(1)*data_99T_avg.exposureTime + bestfit1(2);
+scatter(data_99T_avg.exposureTime, data_99T_avg.imgTLmeanNorm, 'r', 'DisplayName', 'TL99')
+plot(data_99T_avg.exposureTime, orig1, '--r', [0 60e-3], xtnd1, '--r', 'DisplayName', 'TL99')
+theString = sprintf('TL99: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(10e-3, 170, theString, 'FontSize', 12);
+
+bestfit1 = polyfit(data_99T_avg.exposureTime, data_99T_avg.imgMmeanNorm, 1);
+orig1 = polyval(bestfit1, data_99T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 60e-3]);
+disp_pr_s = bestfit1(1)*data_99T_avg.exposureTime + bestfit1(2);
+scatter(data_99T_avg.exposureTime, data_99T_avg.imgMmeanNorm, 'g', 'DisplayName', 'M99')
+plot(data_99T_avg.exposureTime, orig1, '--r', [0 60e-3], xtnd1, '--r', 'DisplayName', 'M99')
+theString = sprintf('M99: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(10e-3, 160, theString, 'FontSize', 12);
+
+
+% Plot a single ISOSpeed - 198
+bestfit1 = polyfit(data_198T_avg.exposureTime, data_198T_avg.imgTLmeanNorm, 1);
+orig1 = polyval(bestfit1, data_198T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 20e-3]);
+disp_pr_s = bestfit1(1)*data_198T_avg.exposureTime + bestfit1(2);
+scatter(data_198T_avg.exposureTime, data_198T_avg.imgTLmeanNorm, 'r', 'DisplayName', 'TL198')
+plot(data_198T_avg.exposureTime, orig1, '--g', [0 20e-3], xtnd1, '--g', 'DisplayName', 'TL198')
+theString = sprintf('TL198: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(25e-3, 200, theString, 'FontSize', 12);
+
+bestfit1 = polyfit(data_198T_avg.exposureTime, data_198T_avg.imgMmeanNorm, 1);
+orig1 = polyval(bestfit1, data_198T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 20e-3]);
+disp_pr_s = bestfit1(1)*data_198T_avg.exposureTime + bestfit1(2);
+scatter(data_198T_avg.exposureTime, data_198T_avg.imgMmeanNorm, 'g', 'DisplayName', 'M198')
+plot(data_198T_avg.exposureTime, orig1, '--g', [0 20e-3], xtnd1, '--g', 'DisplayName', 'M198')
+theString = sprintf('M198: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(25e-3, 190, theString, 'FontSize', 12);
+
+
+% Plot a single ISOSpeed - 299
+bestfit1 = polyfit(data_299T_avg.exposureTime, data_299T_avg.imgTLmeanNorm, 1);
+orig1 = polyval(bestfit1, data_299T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 15e-3]);
+disp_pr_s = bestfit1(1)*data_299T_avg.exposureTime + bestfit1(2);
+scatter(data_299T_avg.exposureTime, data_299T_avg.imgTLmeanNorm, 'b', 'DisplayName', 'TL299')
+plot(data_299T_avg.exposureTime, orig1, '--b', [0 15e-3], xtnd1, '--b', 'DisplayName', 'TL299')
+theString = sprintf('TL299: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(25e-3, 170, theString, 'FontSize', 12);
+
+bestfit1 = polyfit(data_299T_avg.exposureTime, data_299T_avg.imgMmeanNorm, 1);
+orig1 = polyval(bestfit1, data_299T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 15e-3]);
+disp_pr_s = bestfit1(1)*data_299T_avg.exposureTime + bestfit1(2);
+scatter(data_299T_avg.exposureTime, data_299T_avg.imgMmeanNorm, 'g', 'DisplayName', 'M299')
+plot(data_299T_avg.exposureTime, orig1, '--b', [0 15e-3], xtnd1, '--b', 'DisplayName', 'M299')
+theString = sprintf('M299: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(25e-3, 160, theString, 'FontSize', 12);
+
+% Plot a single ISOSpeed - 395
+bestfit1 = polyfit(data_395T_avg.exposureTime, data_395T_avg.imgTLmeanNorm, 1);
+orig1 = polyval(bestfit1, data_395T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 10e-3]);
+disp_pr_s = bestfit1(1)*data_395T_avg.exposureTime + bestfit1(2);
+scatter(data_395T_avg.exposureTime, data_395T_avg.imgTLmeanNorm, 'r', 'DisplayName', 'TL395')
+plot(data_395T_avg.exposureTime, orig1, '--c', [0 10e-3], xtnd1, '--c', 'DisplayName', 'TL395')
+theString = sprintf('TL395: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(40e-3, 200, theString, 'FontSize', 12);
+
+bestfit1 = polyfit(data_395T_avg.exposureTime, data_395T_avg.imgMmeanNorm, 1);
+orig1 = polyval(bestfit1, data_395T_avg.exposureTime);
+xtnd1 = polyval(bestfit1, [0 10e-3]);
+disp_pr_s = bestfit1(1)*data_395T_avg.exposureTime + bestfit1(2);
+scatter(data_395T_avg.exposureTime, data_395T_avg.imgMmeanNorm, 'c', 'DisplayName', 'M395')
+plot(data_395T_avg.exposureTime, orig1, '--c', [0 10e-3], xtnd1, '--c', 'DisplayName', 'M395')
+theString = sprintf('M395: y = %.3f x + %.3f', bestfit1(1), bestfit1(2));
+text(40e-3, 190, theString, 'FontSize', 12);
+
+
+% Plot a single ISOSpeed - 798
+bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.imgTLmeanNorm, 1);
 orig2 = polyval(bestfit2, data_798T_avg.exposureTime);
 xtnd2 = polyval(bestfit2, [0 5e-3]);
 disp_pr_s = bestfit2(1)*data_798T_avg.exposureTime + bestfit2(2);
-scatter(data_798T_avg.exposureTime, data_798T_avg.bMean, 'm', 'DisplayName', 'b798')
-plot(data_798T_avg.exposureTime, orig2,'--m', [0 5e-3], xtnd2, '--m', 'DisplayName', 'b798')
+scatter(data_798T_avg.exposureTime, data_798T_avg.imgTLmeanNorm, 'r', 'DisplayName', 'TL798')
+plot(data_798T_avg.exposureTime, orig2,'--m', [0 5e-3], xtnd2, '--m', 'DisplayName', 'TL798')
 %plot(data_798T_avg.exposureTime, xtnd2, '--m', 'DisplayName', '798')
-theString = sprintf('798b: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
-text(40e-3, 150, theString, 'FontSize', 12);
+theString = sprintf('TL798: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
+text(40e-3, 170, theString, 'FontSize', 12);
+
+bestfit2 = polyfit(data_798T_avg.exposureTime, data_798T_avg.imgMmeanNorm, 1);
+orig2 = polyval(bestfit2, data_798T_avg.exposureTime);
+xtnd2 = polyval(bestfit2, [0 5e-3]);
+disp_pr_s = bestfit2(1)*data_798T_avg.exposureTime + bestfit2(2);
+%errorbar(data_798T.exposureTime, data_798T.imgMmeanNorm, data_798T.imgMSTDNorm, 'DisplayName', 'M798')
+scatter(data_798T_avg.exposureTime, data_798T_avg.imgMmeanNorm, 'g', 'DisplayName', 'M798')
+plot(data_798T_avg.exposureTime, orig2,'--m', [0 5e-3], xtnd2, '--m', 'DisplayName', 'M798')
+%plot(data_798T_avg.exposureTime, xtnd2, '--m', 'DisplayName', '798')
+theString = sprintf('M798: y = %.3f x + %.3f', bestfit2(1), bestfit2(2));
+text(40e-3, 160, theString, 'FontSize', 12);
+
 
 title('DN vs. Exposure Time (s)')
 xlabel('Exposure Time (s)')
