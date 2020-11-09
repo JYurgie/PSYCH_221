@@ -10,8 +10,54 @@
 % close all
 % clc
 
-offsetIMG = 62.91;
-offsetPXL = 153.55;
+offsetIMG55 = 63.137;
+offsetIMG99 = 63.660;
+offsetIMG198 = 63.651;
+offsetIMG298 = 63.179;
+offsetIMG395 = 62.463;
+offsetIMG798 = 62.107;
+
+offsetR55 = 153.808;
+offsetG55 = 153.807;
+offsetB55 = 153.803;
+
+offsetR99 = 153.982;
+offsetG99 = 153.981;
+offsetB99 = 153.976;
+
+offsetR198 = 148.644;
+offsetG198 = 148.644;
+offsetB198 = 148.638;
+
+offsetR298 = 153.821;
+offsetG298 = 153.820;
+offsetB298 = 153.818;
+
+offsetR395 = 153.580;
+offsetG395 = 153.584;
+offsetB395 = 153.579;
+
+offsetR798 = 153.463;
+offsetG798 = 153.458;
+offsetB798 = 153.466;
+
+offsetTL55 = 63.306;
+offsetM55 = 62.920;
+
+offsetTL99 = 63.765;
+offsetM99 = 63.548;
+
+offsetTL198 = 63.712;
+offsetM198 = 63.594;
+
+offsetTL298 = 63.252;
+offsetM298 = 63.081;
+
+offsetTL395 = 62.970;
+offsetM395 = 61.839;
+
+offsetTL798 = 62.732;
+offsetM798 = 61.307;
 
 img_path = "Camera_Noise/PRNU_DSNU/ISO_*/";
 
@@ -106,119 +152,119 @@ for i=1:length(files)
    
    switch info.ISOSpeedRatings
         case 55
-            data(i).imgMeanNorm = mean2((img-offsetIMG));
-            data(i).imgSTDNorm = std2((img-offsetIMG));
-            data(i).rMeanNorm = mean2((r-offsetPXL));
-            data(i).rSTDNorm = std2((r-offsetPXL));
-            data(i).gMeanNorm = mean2((g-offsetPXL));
-            data(i).gSTDNorm = std2((g-offsetPXL));
-            data(i).bMeanNorm = mean2((b-offsetPXL));
-            data(i).bSTDNorm = std2((b-offsetPXL));
+            data(i).imgMeanNorm = mean2((img-offsetIMG55));
+            data(i).imgSTDNorm = std2((img-offsetIMG55));
+            data(i).rMeanNorm = mean2((r-offsetR55));
+            data(i).rSTDNorm = std2((r-offsetR55));
+            data(i).gMeanNorm = mean2((g-offsetG55));
+            data(i).gSTDNorm = std2((g-offsetG55));
+            data(i).bMeanNorm = mean2((b-offsetB55));
+            data(i).bSTDNorm = std2((b-offsetB55));
             
-            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetIMG));
-            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG));
-            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG));
-            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetIMG));
+            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetTL55));
+            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG55));
+            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG55));
+            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetM55));
 
-            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetIMG));
-            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG));
-            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG));
-            data(i).imgMstdNorm = std2((data(i).imgM-offsetIMG));
+            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetTL55));
+            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG55));
+            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG55));
+            data(i).imgMstdNorm = std2((data(i).imgM-offsetM55));
         case 99
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/1.8);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/1.8);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/1.8);
-            data(i).rSTDNorm = std2((r-offsetPXL)/1.8);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/1.8);
-            data(i).gSTDNorm = std2((g-offsetPXL)/1.8);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/1.8);
-            data(i).bSTDNorm = std2((b-offsetPXL)/1.8);
+            data(i).imgMeanNorm = mean2((img-offsetIMG99)/1.8);
+            data(i).imgSTDNorm = std2((img-offsetIMG99)/1.8);
+            data(i).rMeanNorm = mean2((r-offsetR99)/1.8);
+            data(i).rSTDNorm = std2((r-offsetR99)/1.8);
+            data(i).gMeanNorm = mean2((g-offsetG99)/1.8);
+            data(i).gSTDNorm = std2((g-offsetG99)/1.8);
+            data(i).bMeanNorm = mean2((b-offsetB99)/1.8);
+            data(i).bSTDNorm = std2((b-offsetB99)/1.8);
             
-            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetIMG)/1.8);
-            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG)/1.8);
-            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG)/1.8);
-            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetIMG)/1.8);
+            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetTL99)/1.8);
+            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG99)/1.8);
+            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG99)/1.8);
+            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetM99)/1.8);
 
-            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetIMG)/1.8);
-            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG)/1.8);
-            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG)/1.8);
-            data(i).imgMstdNorm = std2((data(i).imgM-offsetIMG)/1.8);
+            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetTL99)/1.8);
+            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG99)/1.8);
+            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG99)/1.8);
+            data(i).imgMstdNorm = std2((data(i).imgM-offsetM99)/1.8);
         case 198
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/3.6);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/3.6);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/3.6);
-            data(i).rSTDNorm = std2((r-offsetPXL)/3.6);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/3.6);
-            data(i).gSTDNorm = std2((g-offsetPXL)/3.6);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/3.6);
-            data(i).bSTDNorm = std2((b-offsetPXL)/3.6);
+            data(i).imgMeanNorm = mean2((img-offsetIMG198)/3.6);
+            data(i).imgSTDNorm = std2((img-offsetIMG198)/3.6);
+            data(i).rMeanNorm = mean2((r-offsetR198)/3.6);
+            data(i).rSTDNorm = std2((r-offsetR198)/3.6);
+            data(i).gMeanNorm = mean2((g-offsetG198)/3.6);
+            data(i).gSTDNorm = std2((g-offsetG198)/3.6);
+            data(i).bMeanNorm = mean2((b-offsetB198)/3.6);
+            data(i).bSTDNorm = std2((b-offsetB198)/3.6);
             
-            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetIMG)/3.6);
-            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG)/3.6);
-            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG)/3.6);
-            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetIMG)/3.6);
+            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetTL198)/3.6);
+            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG198)/3.6);
+            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG198)/3.6);
+            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetM198)/3.6);
 
-            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetIMG)/3.6);
-            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG)/3.6);
-            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG)/3.6);
-            data(i).imgMstdNorm = std2((data(i).imgM-offsetIMG)/3.6);
+            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetTL198)/3.6);
+            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG198)/3.6);
+            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG198)/3.6);
+            data(i).imgMstdNorm = std2((data(i).imgM-offsetM198)/3.6);
         case 299
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/5.44);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/5.44);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/5.44);
-            data(i).rSTDNorm = std2((r-offsetPXL)/5.44);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/5.44);
-            data(i).gSTDNorm = std2((g-offsetPXL)/5.44);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/5.44);
-            data(i).bSTDNorm = std2((b-offsetPXL)/5.44);
+            data(i).imgMeanNorm = mean2((img-offsetIMG299)/5.44);
+            data(i).imgSTDNorm = std2((img-offsetIMG299)/5.44);
+            data(i).rMeanNorm = mean2((r-offsetR299)/5.44);
+            data(i).rSTDNorm = std2((r-offsetR299)/5.44);
+            data(i).gMeanNorm = mean2((g-offsetG299)/5.44);
+            data(i).gSTDNorm = std2((g-offsetG299)/5.44);
+            data(i).bMeanNorm = mean2((b-offsetB299)/5.44);
+            data(i).bSTDNorm = std2((b-offsetB299)/5.44);
             
-            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetIMG)/5.44);
-            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG)/5.44);
-            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG)/5.44);
-            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetIMG)/5.44);
+            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetTL299)/5.44);
+            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG299)/5.44);
+            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG299)/5.44);
+            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetM299)/5.44);
 
-            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetIMG)/5.44);
-            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG)/5.44);
-            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG)/5.44);
-            data(i).imgMstdNorm = std2((data(i).imgM-offsetIMG)/5.44);
+            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetTL299)/5.44);
+            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG299)/5.44);
+            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG299)/5.44);
+            data(i).imgMstdNorm = std2((data(i).imgM-offsetM299)/5.44);
         case 395
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/7.18);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/7.18);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/7.18);
-            data(i).rSTDNorm = std2((r-offsetPXL)/7.18);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/7.18);
-            data(i).gSTDNorm = std2((g-offsetPXL)/7.18);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/7.18);
-            data(i).bSTDNorm = std2((b-offsetPXL)/7.18);
+            data(i).imgMeanNorm = mean2((img-offsetIMG395)/7.18);
+            data(i).imgSTDNorm = std2((img-offsetIMG395)/7.18);
+            data(i).rMeanNorm = mean2((r-offsetR395)/7.18);
+            data(i).rSTDNorm = std2((r-offsetR395)/7.18);
+            data(i).gMeanNorm = mean2((g-offsetG395)/7.18);
+            data(i).gSTDNorm = std2((g-offsetG395)/7.18);
+            data(i).bMeanNorm = mean2((b-offsetB395)/7.18);
+            data(i).bSTDNorm = std2((b-offsetB395)/7.18);
             
-            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetIMG)/7.18);
-            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG)/7.18);
-            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG)/7.18);
-            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetIMG)/7.18);
+            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetTL395)/7.18);
+            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG395)/7.18);
+            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG395)/7.18);
+            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetM395)/7.18);
 
-            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetIMG)/7.18);
-            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG)/7.18);
-            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG)/7.18);
-            data(i).imgMstdNorm = std2((data(i).imgM-offsetIMG)/7.18);
+            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetTL395)/7.18);
+            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG395)/7.18);
+            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG395)/7.18);
+            data(i).imgMstdNorm = std2((data(i).imgM-offsetM395)/7.18);
         case 798
-            data(i).imgMeanNorm = mean2((img-offsetIMG)/14.51);
-            data(i).imgSTDNorm = std2((img-offsetIMG)/14.51);
-            data(i).rMeanNorm = mean2((r-offsetPXL)/14.51);
-            data(i).rSTDNorm = std2((r-offsetPXL)/14.51);
-            data(i).gMeanNorm = mean2((g-offsetPXL)/14.51);
-            data(i).gSTDNorm = std2((g-offsetPXL)/14.51);
-            data(i).bMeanNorm = mean2((b-offsetPXL)/14.51);
-            data(i).bSTDNorm = std2((b-offsetPXL)/14.51);
+            data(i).imgMeanNorm = mean2((img-offsetIMG798)/14.51);
+            data(i).imgSTDNorm = std2((img-offsetIMG798)/14.51);
+            data(i).rMeanNorm = mean2((r-offsetR798)/14.51);
+            data(i).rSTDNorm = std2((r-offsetR798)/14.51);
+            data(i).gMeanNorm = mean2((g-offsetG798)/14.51);
+            data(i).gSTDNorm = std2((g-offsetG798)/14.51);
+            data(i).bMeanNorm = mean2((b-offsetB798)/14.51);
+            data(i).bSTDNorm = std2((b-offsetB798)/14.51);
             
-            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetIMG)/14.51);
-            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG)/14.51);
-            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG)/14.51);
-            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetIMG)/14.51);
+            data(i).imgTLmeanNorm = mean2((data(i).imgTL-offsetTL798)/14.51);
+            data(i).imgTMmeanNorm = mean2((data(i).imgTM-offsetIMG798)/14.51);
+            data(i).imgLMmeanNorm = mean2((data(i).imgLM-offsetIMG798)/14.51);
+            data(i).imgMmeanNorm = mean2((data(i).imgM-offsetM798)/14.51);
 
-            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetIMG)/14.51);
-            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG)/14.51);
-            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG)/14.51);
-            data(i).imgMstdNorm = std2((data(i).imgM-offsetIMG)/14.51);
+            data(i).imgTLstdNorm = std2((data(i).imgTL-offsetTL798)/14.51);
+            data(i).imgTMstdNorm = std2((data(i).imgTM-offsetIMG798)/14.51);
+            data(i).imgLMstdNorm = std2((data(i).imgLM-offsetIMG798)/14.51);
+            data(i).imgMstdNorm = std2((data(i).imgM-offsetM798)/14.51);
 %         case 1598
 %             data(i).imgMeanNorm = mean2(img/35.29);
 %             data(i).imgSTDNorm = std2(img/35.29);
