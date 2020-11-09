@@ -13,7 +13,7 @@
 offsetIMG55 = 63.137;
 offsetIMG99 = 63.660;
 offsetIMG198 = 63.651;
-offsetIMG298 = 63.179;
+offsetIMG299 = 63.179;
 offsetIMG395 = 62.463;
 offsetIMG798 = 62.107;
 
@@ -29,9 +29,9 @@ offsetR198 = 148.644;
 offsetG198 = 148.644;
 offsetB198 = 148.638;
 
-offsetR298 = 153.821;
-offsetG298 = 153.820;
-offsetB298 = 153.818;
+offsetR299 = 153.821;
+offsetG299 = 153.820;
+offsetB299 = 153.818;
 
 offsetR395 = 153.580;
 offsetG395 = 153.584;
@@ -50,8 +50,8 @@ offsetM99 = 63.548;
 offsetTL198 = 63.712;
 offsetM198 = 63.594;
 
-offsetTL298 = 63.252;
-offsetM298 = 63.081;
+offsetTL299 = 63.252;
+offsetM299 = 63.081;
 
 offsetTL395 = 62.970;
 offsetM395 = 61.839;
@@ -335,8 +335,8 @@ data_798S = table2struct(data_798T); % change it back to struct array if necessa
 disp('Saving Workspace Variables')
 filename = 'ReadNoise_Data.mat';
 %filename = 'Z:\ReadNoise_Data.mat';
-%save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
-save(filename, 'data_55S_avg','data_99S_avg','data_198S_avg', 'data_299S_avg', 'data_395S_avg', 'data_798S_avg', '-v7.3');
+save(filename, 'data_55S','data_99S','data_198S', 'data_299S', 'data_395S', 'data_798S', '-v7.3'); 
+%save(filename, 'data_55S_avg','data_99S_avg','data_198S_avg', 'data_299S_avg', 'data_395S_avg', 'data_798S_avg', '-v7.3');
 
 % Plot the data for each isoSpeed setting (Data is not normalized)
 figure(1)

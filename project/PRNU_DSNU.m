@@ -13,7 +13,7 @@
 offsetIMG55 = 63.137;
 offsetIMG99 = 63.660;
 offsetIMG198 = 63.651;
-offsetIMG298 = 63.179;
+offsetIMG299 = 63.179;
 offsetIMG395 = 62.463;
 offsetIMG798 = 62.107;
 
@@ -29,9 +29,9 @@ offsetR198 = 148.644;
 offsetG198 = 148.644;
 offsetB198 = 148.638;
 
-offsetR298 = 153.821;
-offsetG298 = 153.820;
-offsetB298 = 153.818;
+offsetR299 = 153.821;
+offsetG299 = 153.820;
+offsetB299 = 153.818;
 
 offsetR395 = 153.580;
 offsetG395 = 153.584;
@@ -50,8 +50,8 @@ offsetM99 = 63.548;
 offsetTL198 = 63.712;
 offsetM198 = 63.594;
 
-offsetTL298 = 63.252;
-offsetM298 = 63.081;
+offsetTL299 = 63.252;
+offsetM299 = 63.081;
 
 offsetTL395 = 62.970;
 offsetM395 = 61.839;
